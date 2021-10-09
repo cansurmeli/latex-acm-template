@@ -1,0 +1,59 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{listings}
+
+\usepackage{pgfplots}
+
+\usepackage{makecell}
+
+\usepackage{svg}
+
+\lstset{ 
+	showspaces=false,         % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,   % underline spaces within strings only
+	stringstyle=\color{blue}, % string literal style
+	tabsize=2,	              % sets default tabsize to 2 spaces
+}
+
+% Remove citation information below abstract
+\settopmatter{printacmref=false}
+
+% Remove footnote with conference information in the first column
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\begin{document}
+	%%	The "title" command has an optional parameter,
+	%% allowing the author to define a "short title" to be used in page headers.
+	\title{Unsupervised Controllable Trajectory Creation with Generative Adversarial Networks
+		\large \itshape Predicting Feasible Trajectories of Humans or Vehicles in Various Scenarios}
+	
+	%% The "author" command and its associated commands are used to define the authors and their affiliations.
+	\author{Mehmet Can Sürmeli}
+	\email{suerme01@ads.uni-passau.de}
+	\affiliation{
+	  \institution{Faculty of Informatics and Mathematics, University of Passau}
+	}
+	
+	\begin{abstract}
+	\input{0-abstract}
+	\end{abstract}
+	
+	\keywords{trajectory prediction, generative adversarial networks}
+	
+	\maketitle
+	
+	% Remove running headers (must be after \maketitle)
+	\pagestyle{plain}
+
+	\section{Introduction}
+	\input{1-introduction}
+	
+	\section{Background}
+	\input{2-background}
+
+	\section{Proposed Plan}
+	\input{3-proposed-plan}
+
+	\bibliographystyle{alpha}
+	\bibliography{bibliography}
+\end{document}

@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  latex:
+    build: .
+    container_name: latex
+    volumes:
+      - type: bind
+        source: "$PWD/../"
+        target: /home
+    stdin_open: true
+    tty: true
